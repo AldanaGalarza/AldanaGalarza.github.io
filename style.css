@@ -1,0 +1,18 @@
+.objetivos{
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.contenedor{
+    display:flex;
+    margin-top: 10%;
+}
+
+.columna-izquierda{
+    width: 50%;
+}
+
+.columna-izquierda{
+    width: 50%;
+}
