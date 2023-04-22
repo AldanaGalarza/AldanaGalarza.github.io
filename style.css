@@ -1,15 +1,19 @@
+* {
+display: flexbox;
+}
+
 .nosotros {
-    display: flex;
     margin-top: 5%;
 }
 
 .nosotros img {
-    width: 70%;
+    width: 60%;
     margin-left: 40%;
 }
 
 .pres {
-    width: 50%;
+    position: absolute;
+    width: 40%;
     margin-top: 10%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -21,8 +25,7 @@
     text-align: center;
 }
 
-
-.contenedor {
+.contenedor{
     display: flex;
 }
 
@@ -34,3 +37,4 @@
 .columna-izquierda {
     width: 50%;
 }
+
