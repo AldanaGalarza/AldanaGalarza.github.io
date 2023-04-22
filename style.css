@@ -3,12 +3,14 @@ display: flexbox;
 }
 
 .nosotros {
-    margin-top: 5%;
+    position: relative;
+    margin-top: 5px;
 }
 
 .nosotros img {
-    width: 60%;
-    margin-left: 40%;
+    width: 70%;
+    height: 500px;
+    margin-left: 30%;
 }
 
 .pres {
@@ -21,11 +23,20 @@ display: flexbox;
 }
 
 .objetivos {
+    position: relative;
     align-items: center;
     text-align: center;
 }
 
+.objetivos img{
+    text-align: center;
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
 .contenedor{
+    position: relative;
     display: flex;
 }
 
@@ -34,7 +45,14 @@ display: flexbox;
 }
 
 
-.columna-izquierda {
+.columna-derecha {
     width: 50%;
+}
+
+.div-sup p{
+    margin-top: 80px;
+    text-align: right;
+    background-color: aqua;
+    margin:;
 }
 
