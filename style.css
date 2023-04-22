@@ -1,7 +1,30 @@
+.nosotros{
+    margin-top: 5%;
+}
+
+.nosotros img{
+    display: flex;
+    width: 60%;
+    margin-left: 40%;
+}
+
+.pres {
+    position: absolute;
+    width: 50%;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: left;
+}
+
 .objetivos{
     align-items: center;
     text-align: center;
     margin-top: 10%;
+}
+
+.objetivos p{
+    
 }
 
 .contenedor{
@@ -12,6 +35,7 @@
 .columna-izquierda{
     width: 50%;
 }
+
 
 .columna-izquierda{
     width: 50%;
