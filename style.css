@@ -5,9 +5,13 @@ display: flexbox;
 .nav-bar {
     position: sticky;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
     display: block;
-    background-color:#ff6315;
+    background-color: #ff6315;
+    text-align: right;
+    font-size: 150%;
+    color:beige;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .nosotros {
@@ -15,18 +19,21 @@ display: flexbox;
 }
 
 .nosotros img {
+    height:90vh;
     width: 100%;
-    height:90dvh;
-    /*margin-left: 30%;*/
 }
 
 .pres {
     position: absolute;
-    width: 40%;
-    margin-top: 10%;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 20%;
+    height: 30vh;
     padding: 20px;
-    text-align: left;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+    text-align:justify;
+    color: #ff6315;
+    background-color: white;
 }
 
 .objetivos {
