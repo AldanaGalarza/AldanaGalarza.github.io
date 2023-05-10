@@ -57,6 +57,7 @@ display: flexbox;
 
 .columna-izquierda {
     width: 50%;
+    border-spacing: 5%;
 }
 
 
