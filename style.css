@@ -3,56 +3,67 @@ display: flexbox;
 }
 
 .nav-bar {
-    position: sticky;
-    margin: 0;
-    padding: 30px;
-    display: block;
-    background-color: #ff6315;
-    text-align: right;
-    font-size: 150%;
-    color:beige;
+    display: flex;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 100%;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.nosotros {
-    position: relative;
+.nav-bar img {
+    width: 8%;
+    height: 2%;
+    margin-left: 3%;
+    align-content: left;
 }
 
-.nosotros img {
-    height:90vh;
-    width: 100%;
+.nav-bar nav{
+    margin-right: 3%;
 }
 
-.pres {
-    position: absolute;
-    width: 20%;
-    height: 30vh;
-    padding: 20px;
-    margin-top: 3%;
-    margin-left: 5%;
-    margin-bottom: 15%;
-    text-align:justify;
-    color: #ff6315;
-    background-color: white;
+.nosotros{
+    display: flex;
+    padding: 5%;
+    background-image: url(img/industriaFondo.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 25%;
+}
+.lema {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    color: rgb(255, 255, 0);
+    font-size: 2rem;
+    background-color: rgba(255,255,255,0.3) ;
+    padding: 3%;
 }
 
 .objetivos {
-    position: relative;
+    display: flex;
+    margin: 5%;
+}
+
+.objetivos-izquierda{
+    width: 50%;
     align-items: center;
+    text-align: left;
+}
+
+.presentacion{
+    max-width: 80%;
+}
+
+
+.objetivos-derecha {
+    width: 50%;
     text-align: center;
 }
 
-.objetivos img{
-    text-align: center;
-    margin-top: 15px;
-    width: 100px;
-    height: 100px;
-}
 
 .contenedor{
-    position: relative;
     display: flex;
-    
 }
 
 .columna-izquierda {
