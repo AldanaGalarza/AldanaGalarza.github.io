@@ -61,6 +61,10 @@ display: flexbox;
     text-align: center;
 }
 
+.enumerados{
+    max-width: 80%;
+}
+
 
 .contenedor{
     display: flex;
