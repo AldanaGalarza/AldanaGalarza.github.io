@@ -42,13 +42,15 @@ display: flexbox;
 
 .objetivos {
     display: flex;
-    margin: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .objetivos-izquierda{
     width: 50%;
     align-items: center;
     text-align: left;
+    margin-left: 5%;
 }
 
 .presentacion{
@@ -58,6 +60,7 @@ display: flexbox;
 
 .objetivos-derecha {
     width: 50%;
+    align-items: center;
     text-align: center;
 }
 
