@@ -42,13 +42,12 @@ display: flexbox;
 
 .objetivos {
     display: flex;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .objetivos-izquierda{
     width: 50%;
-    align-items: center;
     text-align: left;
     margin-left: 5%;
 }
@@ -60,7 +59,6 @@ display: flexbox;
 
 .objetivos-derecha {
     width: 50%;
-    align-items: center;
     text-align: center;
 }
 
@@ -75,7 +73,10 @@ display: flexbox;
 
 .columna-izquierda {
     width: 50%;
-    border-spacing: 5%;
+}
+
+.texto-informativo{
+    max-width: 80%;
 }
 
 
@@ -83,9 +84,7 @@ display: flexbox;
     width: 50%;
 }
 
-
 .div-sup p{
-    margin-top: 80px;
     text-align: right;
     background-color: aqua;
 }
