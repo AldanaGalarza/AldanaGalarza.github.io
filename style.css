@@ -78,6 +78,7 @@ a img:hover{
 
 a:visited{
     text-decoration: none;
+    color: black;
 }
 
 footer{
@@ -94,7 +95,34 @@ footer p{
     max-width: 75%;
 }
 
+li{
+    list-style: none;
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10vh auto;
+    gap: 10px;
+    width: 75vw;
+    max-width: 700px;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
 
+form input{
+    width: 50vw;
+}
 
+form textarea{
+    width: 50vw;
+    resize: none;
+}
+
+form *{
+    max-width: 600px;
+    border-radius: 5px;
+}
 
