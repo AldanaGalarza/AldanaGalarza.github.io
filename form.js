@@ -1,56 +1,82 @@
+const contForm = document.querySelector(".contForm");
+let primero = document.querySelector("form input");
+primero.focus();
 
 function validar() {
     let reg_nombre = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,50}$/;
     let reg_mail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
     let reg_msj = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{5,200}$/;
-    let name = document.querySelector("#f_name").value;
-    let email = document.querySelector("#f_email").value;
-    let mensaje = document.querySelector("#f_msj").value;
-    let correcto=true;
-    let errores=document.getElementById("errores");
-    errores.innerHTML="";
-    console.log(name,email,mensaje);
+    let nameInput = document.querySelector("#f_name");
+    let emailInput = document.querySelector("#f_email");
+    let mensajeInput = document.querySelector("#f_msj");
+    let erroresLista = document.getElementById("errores");
+    erroresLista.innerHTML = "";
+    erroresLista.style.display = "none";
+    let msjs = document.getElementById("mensajes");
+    let verf = false;
 
-    if(name.trim()==""){
+    if (nameInput.value.trim() == "") {
+        nameInput.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML="Completar nombre";
-        errores.appendChild(p);
-        correcto=false;
-        name = document.getElementById("f_name").focus();
-    } else if(reg_name.test(name)){
+        p.innerHTML = "Complete el nombre";
+        erroresLista.appendChild(p);
+        verf = true;
+    } else if (!reg_nombre.test(nameInput.value)) {
+        nameInput.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML="Nombre inválido";
-        errores.appendChild(p);
-        correcto=false;
-        name = document.getElementById("f_name").focus();
+        p.innerHTML = "Nombre inválido";
+        erroresLista.appendChild(p);
+        verf = true;
     }
-    if(email.trim()==""){
+    if (emailInput.value.trim() == "") {
+        emailInput.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML="Completar correo";
-        errores.appendChild(p);
-        correcto=false;
-        email = document.getElementById("f_email").focus();
-    } else if(reg_mail.test(email)){
+        p.innerHTML = "Ingrese mail";
+        erroresLista.appendChild(p);
+        verf = true;
+    } else if (!reg_mail.test(emailInput.value)) {
+        emailInput.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML="Correo inválido";
-        errores.appendChild(p);
-        correcto=false;
-        email = document.getElementById("f_email").focus();
+        p.innerHTML = "Mail inválido";
+        erroresLista.appendChild(p);
+        verf = true;
     }
-    if(mensaje.trim()==""){
+    if (mensajeInput.value.trim() == "") {
+        mensajeInput.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML="Completar correo";
-        errores.appendChild(p);
-        correcto=false;
-        mensaje = document.getElementById("f_msj").focus();
-    } else if(reg_msj.test(mensaje)){
+        p.innerHTML = "Ingrese un mensaje";
+        erroresLista.appendChild(p);
+        verf = true;
+    } else if (!reg_msj.test(mensajeInput.value)) {
+        mensajeInput.add.classList("error");
         let p = document.createElement("p");
-        p.innerHTML="Correo inválido";
-        errores.appendChild(p);
-        correcto=false;
-        mensaje = document.getElementById("f_msj").focus();
+        p.innerHTML = "El mensaje debe tener entre 5 y 200 caracteres";
+        erroresLista.appendChild(p);
+        verf = true;
     }
 
+    if (verf) {
+        erroresLista.style.display = "initial";
+        return false;
+    } else {
+        let p = document.createElement("p");
+        if ((!nameInput.value.trim() == "") && (reg_nombre.test(nameInput.value)) && (!emailInput.value.trim() == "") && (reg_mail.test(emailInput.value)) && (!mensajeInput.value.trim() == "") && (reg_msj.test(mensajeInput.value))) {
+            p.innerHTML = nameInput.value + " dice " + mensajeInput.value + ". Contacto: " + emailInput.value + ".";
+            msjs.appendChild(p);
+            setTimeout(() => {
+                contForm.submit()
+            }, 3000);
+        }
+    }
 
+    contForm.reset();
+    let primero = document.querySelector("form input");
+    primero.focus();
+
+    return false;
 }
 
+contForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validar()
+})

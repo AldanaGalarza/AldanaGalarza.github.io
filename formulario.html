@@ -24,16 +24,17 @@
             </nav>
         </header>
         <main>
-            <form class="contForm" onsubmit="return validar()">
+            <form class="contForm">
                 <label for="f_name">Nombre</label>
                 <input type="text" id="f_name">
                 <label for="f_email">E-mail</label>
-                <input type="email" id="f_email">
+                <input type="text" id="f_email">
                 <label for="f_msj">Mensaje</label>
                 <textarea id="f_msj" cols="30" rows="10" placeholder="Máximo 200 carácteres"></textarea>
-                <button type="submit">Enviar</button>
                 <div id="errores"></div>
+                <button type="submit">Enviar</button>
             </form>
+            <div id="mensajes"></div>
         </main>
         <footer>
             <div class="pie">
