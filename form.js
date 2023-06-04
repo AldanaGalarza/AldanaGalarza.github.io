@@ -63,9 +63,6 @@ function validar() {
         if ((!nameInput.value.trim() == "") && (reg_nombre.test(nameInput.value)) && (!emailInput.value.trim() == "") && (reg_mail.test(emailInput.value)) && (!mensajeInput.value.trim() == "") && (reg_msj.test(mensajeInput.value))) {
             p.innerHTML = nameInput.value + " dice " + mensajeInput.value + ". Contacto: " + emailInput.value + ".";
             msjs.appendChild(p);
-            setTimeout(() => {
-                contForm.submit()
-            }, 3000);
         }
     }
 
