@@ -1,6 +1,6 @@
 * {
 box-sizing: border-box;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-family:"Roboto Condensed", sans-serif;
 font-size: 1.1rem;
 margin:0;
 --color-fondo:lightgrey;
@@ -52,7 +52,7 @@ section{
 }
 
 .productos{
-    position: sticky;
+    position: relative;
     top: 20px;
     margin: 20px 0;
     width: 100%;
@@ -196,6 +196,7 @@ h4{
     border-radius: 15px;
     border: solid 5px rgba(200,200,200,0.5);
     background-color: rgba(200,200,200,0.5);
+    margin-top: 8%;
 }
 
 .carrusel img{
@@ -216,3 +217,31 @@ h4{
     top: 45%;
     border-radius: 50%;
 }
+
+.consultas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/industriaFondo.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 25vh;
+}
+
+.consultas h1, .consultas p, .consultas button{
+    position: relative;
+}
+
+.consultas button{
+    background-color: rgba(200,200,200,0.8);
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+}
+
+.consultas h1, .consultas p{
+    background-color:rgba(200, 200, 200,0.8);
+    color: rgb(0, 0, 0);
+}
+
