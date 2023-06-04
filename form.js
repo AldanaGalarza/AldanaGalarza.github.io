@@ -1,28 +1,56 @@
-const d = document;
-let reg_nombre=/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,50}$/;
-let reg_mail=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-let reg_msj=/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{5,200}$/;
-let f_name =  d.querySelector("#f_name");
-let f_email = d.querySelector("#f_email");
-let f_msj = d.querySelector("#f_msj");
-let focoPrimero = d.querySelector("form input");
 
-focoPrimero.focus();
+function validar() {
+    let reg_nombre = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,50}$/;
+    let reg_mail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+    let reg_msj = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{5,200}$/;
+    let name = document.querySelector("#f_name").value;
+    let email = document.querySelector("#f_email").value;
+    let mensaje = document.querySelector("#f_msj").value;
+    let correcto=true;
+    let errores=document.getElementById("errores");
+    errores.innerHTML="";
+    console.log(name,email,mensaje);
 
-function validar(){
-    f_name.classList.remove("error");
-    f_email.classList.remove("error");
-    f_msj.classList.remove("error");
+    if(name.trim()==""){
+        let p = document.createElement("p");
+        p.innerHTML="Completar nombre";
+        errores.appendChild(p);
+        correcto=false;
+        name = document.getElementById("f_name").focus();
+    } else if(reg_name.test(name)){
+        let p = document.createElement("p");
+        p.innerHTML="Nombre inválido";
+        errores.appendChild(p);
+        correcto=false;
+        name = document.getElementById("f_name").focus();
+    }
+    if(email.trim()==""){
+        let p = document.createElement("p");
+        p.innerHTML="Completar correo";
+        errores.appendChild(p);
+        correcto=false;
+        email = document.getElementById("f_email").focus();
+    } else if(reg_mail.test(email)){
+        let p = document.createElement("p");
+        p.innerHTML="Correo inválido";
+        errores.appendChild(p);
+        correcto=false;
+        email = document.getElementById("f_email").focus();
+    }
+    if(mensaje.trim()==""){
+        let p = document.createElement("p");
+        p.innerHTML="Completar correo";
+        errores.appendChild(p);
+        correcto=false;
+        mensaje = document.getElementById("f_msj").focus();
+    } else if(reg_msj.test(mensaje)){
+        let p = document.createElement("p");
+        p.innerHTML="Correo inválido";
+        errores.appendChild(p);
+        correcto=false;
+        mensaje = document.getElementById("f_msj").focus();
+    }
 
-    let listaErrores = document.getElementById("errores");
-    
-    listaErrores.innerHTML="";
-    listaErrores
-
-    let listaMsjs = d.querySelector("mensajes");
-
-    return false;
 
 }
 
-console.log("hola");

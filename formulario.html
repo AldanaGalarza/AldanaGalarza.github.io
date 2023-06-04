@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/conoFavicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <script defer src="/form.js"></script>
+    <script src="/form.js" defer></script>
     <title>Contacto</title>
 </head>
 
@@ -25,17 +25,14 @@
         </header>
         <main>
             <form class="contForm" onsubmit="return validar()">
-                <legend>Envíanos tu consulta</legend>
                 <label for="f_name">Nombre</label>
-                <input type="text" name="nombre" id="f_name" title="Nombre solo acepta letras y espacios en blanco" required>
+                <input type="text" id="f_name">
                 <label for="f_email">E-mail</label>
-                <title>e-mail incorrecto</title>
-                <input type="email" name="email" id="f_email" title="e-mail incorrecto" required>
+                <input type="email" id="f_email">
                 <label for="f_msj">Mensaje</label>
-                <textarea id="f_msj" name="comentario" cols="30" rows="10" placeholder="Máximo 200 carácteres" title="Escribe tus comentarios" required></textarea>
+                <textarea id="f_msj" cols="30" rows="10" placeholder="Máximo 200 carácteres"></textarea>
                 <button type="submit">Enviar</button>
                 <div id="errores"></div>
-                <div id="mensajes"></div>
             </form>
         </main>
         <footer>
