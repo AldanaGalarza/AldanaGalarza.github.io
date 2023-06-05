@@ -48,7 +48,7 @@ function validar() {
         erroresLista.appendChild(p);
         verf = true;
     } else if (!reg_msj.test(mensajeInput.value)) {
-        mensajeInput.add.classList("error");
+        mensajeInput.classList.add("error");
         let p = document.createElement("p");
         p.innerHTML = "El mensaje debe tener entre 5 y 200 caracteres";
         erroresLista.appendChild(p);
